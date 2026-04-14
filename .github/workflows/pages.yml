@@ -1,0 +1,47 @@
+# Publishes the static site to the gh-pages branch.
+# Settings → Pages → Source: Deploy from a branch → gh-pages / (root)
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Stage site files
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp index.html privacy-policy.html style.css 404.html favicon.svg robots.txt email.js theme.js _site/
+          touch _site/.nojekyll
+          ls -la _site
+      - name: Block disallowed attribution in published files
+        run: |
+          set -euo pipefail
+          if grep -RIn --include='*.html' --include='*.js' -E -i \
+            'made[[:space:]]+with[[:space:]]+cursor|built[[:space:]]+with[[:space:]]+cursor' _site; then
+            echo "::error::Published HTML/JS must not contain disallowed tooling attribution."
+            exit 1
+          fi
+      - name: Push to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          branch: gh-pages
+          clean: true
+          commit-message: "Deploy support site"
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
