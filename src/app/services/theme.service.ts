@@ -10,7 +10,7 @@ export class ThemeService {
   private readonly KEY = 'breathewith-theme';
   private readonly isBrowser: boolean;
   
-  themeChoice = signal<ThemeChoice>('classic');
+  themeChoice = signal<ThemeChoice>('system');
 
   constructor(@Inject(PLATFORM_ID) platformId: object) {
     this.isBrowser = isPlatformBrowser(platformId);
@@ -44,7 +44,7 @@ export class ThemeService {
     if (raw && allowed.includes(raw)) {
       return raw;
     }
-    return 'classic';
+    return 'system';
   }
 
   private applyTheme(choice: ThemeChoice) {
