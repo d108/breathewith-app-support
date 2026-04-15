@@ -1,6 +1,9 @@
 /* Calm — default (matches the refreshed layout). Classic restores the first public palette. */
 :root,
 html[data-theme="calm"] {
+    --action-pad-y: 0.75rem;
+    --action-pad-x: 1.5rem;
+    --action-min-height: 2.75rem;
     --bg-color: #f4f8f7;
     --text-primary: #1e2d33;
     --text-secondary: #5a6b72;
@@ -347,11 +350,12 @@ h2 {
 }
 
 .store-button {
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.75rem;
-    padding: 0 1.5rem;
+    min-height: var(--action-min-height);
+    padding: var(--action-pad-y) var(--action-pad-x);
     border-radius: 0.75rem;
     background: #000000;
     color: #ffffff;
@@ -406,7 +410,7 @@ h2 {
 .play-test-form {
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
+    gap: 0.75rem;
     align-items: stretch;
     max-width: min(100%, 38rem);
     margin-bottom: 1rem;
@@ -442,7 +446,6 @@ h2 {
 }
 
 .play-test-send {
-    margin-top: 0.2rem;
     align-self: flex-start;
     border: none;
     cursor: pointer;
@@ -469,15 +472,33 @@ h2 {
 }
 
 .button {
-    display: inline-block;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--action-min-height);
+    padding: var(--action-pad-y) var(--action-pad-x);
     background-color: var(--accent-green);
     color: var(--on-accent);
-    padding: 0.75rem 1.75rem;
     border-radius: 2rem;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 0.75rem;
+    margin-top: 0;
     transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* .lede + inline-flex .button does not collapse margins with the paragraph like a block
+   .store-actions row does—so avoid extra margin-top here or the Email support gap looks large. */
+.lede + .button {
+    margin-top: 0;
+}
+
+#privacy > p {
+    margin-bottom: 0.75rem;
+}
+
+#privacy p + .button {
+    margin-top: 0;
 }
 
 .button:hover {
