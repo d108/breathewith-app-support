@@ -71,7 +71,7 @@ import { RouterLink } from '@angular/router';
 
       <section id="privacy" class="card">
         <h2>Privacy</h2>
-        <p>BreatheWith is designed so your settings and preferences stay on your device. For full legal wording, read the policy linked below.</p>
+        <p class="lede">BreatheWith is designed so your settings and preferences stay on your device. For full legal wording, read the policy linked below.</p>
         <a routerLink="/privacy" class="button secondary-button">Read privacy policy</a>
       </section>
     </main>

@@ -32,6 +32,7 @@ html[data-theme="classic"] {
     --card-border: 1px solid rgba(145, 194, 189, 0.2);
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     --h2-rule: rgba(145, 194, 189, 0.4);
+    --link-accent: var(--accent-green-dark);
 }
 
 html[data-theme="dark"] {
@@ -73,6 +74,20 @@ body {
     display: flex;
     flex-direction: column;
     transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Plain <a href> uses the UA blue unless restyled; align with theme tokens. */
+a:any-link {
+    color: var(--link-accent);
+}
+
+a:any-link:hover {
+    color: var(--accent-green);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--link-accent);
+    outline-offset: 2px;
 }
 
 .container {
