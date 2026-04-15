@@ -416,6 +416,11 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.play-test-steps .play-test-form {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
 .play-test-form label {
     font-weight: 600;
     font-size: 0.95rem;
