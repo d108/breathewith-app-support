@@ -121,11 +121,6 @@ body {
     margin: 0 auto;
 }
 
-.container.container--hero {
-    width: min(96%, 56rem);
-    max-width: 56rem;
-}
-
 .site-header {
     background: var(--header-gradient);
     color: var(--on-accent);
