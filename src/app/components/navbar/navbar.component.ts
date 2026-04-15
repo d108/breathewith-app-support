@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
     <div [class.site-header__nav-bar]="!minimal" [class.container]="!minimal">
       <nav class="header-nav" [class.header-nav--themed]="!minimal" aria-label="Support sections">
         <ng-container *ngIf="variant === 'support'">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
           <a routerLink="/" fragment="download">Download</a>
           <a routerLink="/" fragment="android-beta">Android test</a>
           <a routerLink="/" fragment="faq">FAQ</a>
@@ -18,7 +19,7 @@ import { CommonModule } from '@angular/common';
         </ng-container>
         
         <ng-container *ngIf="variant === 'privacy'">
-          <a routerLink="/">Support</a>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
           <a routerLink="/" fragment="faq">FAQ</a>
           <a routerLink="/" fragment="support">Contact</a>
         </ng-container>
