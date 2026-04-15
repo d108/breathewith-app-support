@@ -1,5 +1,4 @@
-# Publishes the static site to the gh-pages branch.
-# Settings → Pages → Source: Deploy from a branch → gh-pages / (root)
+# Publishes the Angular app to the gh-pages branch.
 name: Deploy to GitHub Pages
 
 on:
@@ -21,15 +20,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular app
+        run: npm run build -- --base-href /breathewith-app-support/
+
       - name: Stage site files
         run: |
           set -euo pipefail
           mkdir -p _site
-          cp index.html privacy-policy.html play-test-thanks.html style.css 404.html favicon.svg robots.txt email.js play-test.js theme.js _site/
-          mkdir -p _site/images
-          cp images/feature-graphic-v1.svg images/feature-graphic-v1.png _site/images/
+          cp -r dist/breathewith-app-support/browser/* _site/
+          # Ensure 404.html exists for GH Pages
+          cp _site/404/index.html _site/404.html
+          # Legacy redirect support
+          cp _site/privacy/index.html _site/privacy-policy.html
           touch _site/.nojekyll
           ls -la _site
+
       - name: Block disallowed attribution in published files
         run: |
           set -euo pipefail
@@ -38,12 +53,13 @@ jobs:
             echo "::error::Published HTML/JS must not contain disallowed tooling attribution."
             exit 1
           fi
+
       - name: Push to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
           branch: gh-pages
           clean: true
-          commit-message: "Deploy support site"
+          commit-message: "Deploy Angular support site"
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
