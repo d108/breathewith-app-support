@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BreatheWith</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#91c2bd" id="meta-theme-color">
+  <script>
+    (function () {
+      var choice = "classic";
+      try {
+        var K = "breathewith-theme";
+        var raw = localStorage.getItem(K);
+        if (raw === "system" || raw === "classic" || raw === "calm" || raw === "dark") {
+          choice = raw;
+        }
+      } catch (e) {}
+      var resolved = choice === "system"
+        ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "calm")
+        : choice;
+      document.documentElement.setAttribute("data-theme", resolved);
+    })();
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
