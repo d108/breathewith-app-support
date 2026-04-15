@@ -144,21 +144,17 @@ body {
     margin-bottom: 0;
 }
 
-.hero-banner-frame {
-    display: block;
-    line-height: 0;
-    border-radius: 1.25rem;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    border: var(--card-border);
-    background: #0c2731;
-}
-
+/* Corners come from the SVG only; drop-shadow follows its alpha edge. */
 .hero-banner-img {
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
-    vertical-align: middle;
+    filter: drop-shadow(0 12px 28px rgba(7, 26, 35, 0.2)) drop-shadow(0 4px 10px rgba(7, 26, 35, 0.12));
+}
+
+html[data-theme="dark"] .hero-banner-img {
+    filter: drop-shadow(0 14px 36px rgba(0, 0, 0, 0.55));
 }
 
 .site-header__nav-bar {
