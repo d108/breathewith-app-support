@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
       <div class="container hero-banner">
         <img class="hero-banner-img" src="images/feature-graphic-v1.svg" width="1024" height="500" alt="BreatheWith: calm breathing, quiet focus. Simple tools for a balanced life." decoding="async" fetchpriority="high">
       </div>
-      <app-navbar></app-navbar>
+      <app-navbar [minimal]="false" variant="support"></app-navbar>
     </header>
 
     <main id="main" class="container main-stack">

@@ -8,19 +8,17 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [NavbarComponent, RouterLink, CommonModule],
   template: `
-    <header class="site-header site-header--compact">
-      <div class="container header-inner">
-        <div class="brand">
-          <p class="eyebrow"><a routerLink="/">BreatheWith</a></p>
-          <h1>Privacy Policy</h1>
-          <p class="tagline">How we treat your information</p>
-        </div>
-        <app-navbar></app-navbar>
+    <header class="site-header site-header--home">
+      <div class="container hero-banner">
+        <img class="hero-banner-img" src="images/feature-graphic-v1.svg" width="1024" height="500" alt="BreatheWith: calm breathing, quiet focus. Simple tools for a balanced life." decoding="async" fetchpriority="high">
       </div>
+      <app-navbar [minimal]="false" variant="support"></app-navbar>
     </header>
 
     <main id="main" class="container main-stack">
       <section class="card policy-section">
+        <h1 class="policy-title">Privacy Policy</h1>
+        <p class="policy-tagline">How we treat your information</p>
         <p class="policy-meta"><strong>Last updated: April 14, 2026</strong></p>
         <p>BreatheWith supports breathing practice without building a profile about you. This policy describes what the app does with information in plain language.</p>
 
@@ -52,43 +50,35 @@ import { CommonModule } from '@angular/common';
     </main>
   `,
   styles: [`
-    .site-header--compact {
-      background: var(--header-gradient);
-      color: var(--on-accent);
-      padding: 2rem 0 1.75rem;
+    .site-header--home {
+      background: var(--bg-color);
+      color: var(--text-primary);
+      padding: 1.5rem 0 0;
+      margin-bottom: 0;
     }
 
-    .header-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 1.25rem 2rem;
+    .hero-banner-img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1024 / 500;
+      filter: drop-shadow(0 12px 28px rgba(7, 26, 35, 0.2)) drop-shadow(0 4px 10px rgba(7, 26, 35, 0.12));
     }
 
-    .brand h1 {
+    .policy-title {
       font-size: clamp(1.75rem, 4vw, 2.75rem);
       font-weight: 700;
       letter-spacing: -0.02em;
       line-height: 1.15;
-    }
-
-    .eyebrow {
-      font-size: 0.95rem;
+      color: var(--text-primary);
       margin-bottom: 0.35rem;
     }
 
-    .eyebrow a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 600;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
-    }
-
-    .tagline {
+    .policy-tagline {
       font-size: 1.05rem;
-      opacity: 0.95;
-      margin-top: 0.35rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
       max-width: 28em;
     }
 
@@ -148,10 +138,6 @@ import { CommonModule } from '@angular/common';
     }
 
     @media (max-width: 560px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
       .card {
         padding: 1.5rem 1.25rem;
       }

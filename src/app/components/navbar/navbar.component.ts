@@ -1,18 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <div class="container site-header__nav-bar">
-      <nav class="header-nav header-nav--themed" aria-label="Support sections">
-        <a routerLink="/" fragment="download">Download</a>
-        <a routerLink="/" fragment="android-beta">Android test</a>
-        <a routerLink="/" fragment="faq">FAQ</a>
-        <a routerLink="/" fragment="support">Contact</a>
-        <a routerLink="/privacy" routerLinkActive="active">Privacy</a>
+    <div [class.site-header__nav-bar]="!minimal" [class.container]="!minimal">
+      <nav class="header-nav" [class.header-nav--themed]="!minimal" aria-label="Support sections">
+        <ng-container *ngIf="variant === 'support'">
+          <a routerLink="/" fragment="download">Download</a>
+          <a routerLink="/" fragment="android-beta">Android test</a>
+          <a routerLink="/" fragment="faq">FAQ</a>
+          <a routerLink="/" fragment="support">Contact</a>
+          <a routerLink="/privacy" routerLinkActive="active">Privacy</a>
+        </ng-container>
+        
+        <ng-container *ngIf="variant === 'privacy'">
+          <a routerLink="/">Support</a>
+          <a routerLink="/" fragment="faq">FAQ</a>
+          <a routerLink="/" fragment="support">Contact</a>
+        </ng-container>
       </nav>
     </div>
   `,
@@ -37,7 +46,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     }
 
     .header-nav a {
-      color: var(--text-primary) !important;
+      color: inherit;
       text-decoration: none;
       font-weight: 600;
       border-bottom: 2px solid transparent;
@@ -46,14 +55,28 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       transition: color 0.2s ease, border-color 0.2s ease;
     }
 
-    .header-nav a:hover,
-    .header-nav a.active {
+    /* Support variant (card) styles */
+    .header-nav--themed a {
+      color: var(--text-primary) !important;
+    }
+    
+    .header-nav--themed a:hover,
+    .header-nav--themed a.active {
       color: var(--link-accent) !important;
       border-bottom-color: var(--link-accent);
     }
 
+    /* Privacy variant (inline) styles - usually white text on gradient */
+    :not(.header-nav--themed) a {
+      color: var(--on-accent);
+    }
+
+    :not(.header-nav--themed) a:hover {
+      border-bottom-color: rgba(255, 255, 255, 0.65);
+    }
+
     .header-nav a:focus-visible {
-      outline: 2px solid var(--accent-green-dark);
+      outline: 2px solid currentColor;
       outline-offset: 4px;
       border-radius: 2px;
     }
@@ -65,4 +88,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     }
   `]
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  @Input() minimal = false;
+  @Input() variant: 'support' | 'privacy' = 'support';
+}
