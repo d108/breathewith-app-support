@@ -315,6 +315,49 @@ h2 {
     margin-top: 0.75rem;
 }
 
+.play-test-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    align-items: stretch;
+    max-width: 26rem;
+    margin-bottom: 1rem;
+}
+
+.play-test-form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.play-test-form input[type="email"] {
+    font: inherit;
+    font-size: 1rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--h2-rule);
+    background: var(--surface);
+    color: var(--text-primary);
+}
+
+.play-test-form input[type="email"]::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.85;
+}
+
+.play-test-form input[type="email"]:focus-visible {
+    outline: 2px solid var(--accent-green-dark);
+    outline-offset: 2px;
+}
+
+.play-test-send {
+    margin-top: 0.2rem;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
 .faq-item {
     margin-bottom: 1.75rem;
 }

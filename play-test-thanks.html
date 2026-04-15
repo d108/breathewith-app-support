@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="calm">
+<head>
+    <script>
+    (function () {
+        var choice = "classic";
+        try {
+            var K = "breathewith-theme";
+            var raw = localStorage.getItem(K);
+            if (raw === "system" || raw === "classic" || raw === "calm" || raw === "dark") {
+                choice = raw;
+            }
+        } catch (e) {}
+        var resolved = choice === "system"
+            ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "calm")
+            : choice;
+        document.documentElement.setAttribute("data-theme", resolved);
+    })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks — BreatheWith</title>
+    <meta name="description" content="Your Google Play closed-test signup was received.">
+    <meta name="theme-color" content="#91c2bd" id="meta-theme-color">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header site-header--compact">
+        <div class="container header-inner">
+            <div class="brand">
+                <p class="eyebrow"><a href="index.html">BreatheWith</a></p>
+                <h1>Thanks</h1>
+                <p class="tagline">Your email was sent.</p>
+            </div>
+        </div>
+    </header>
+    <main class="container main-stack">
+        <section class="card" aria-labelledby="thanks-heading">
+            <h2 id="thanks-heading">What happens next</h2>
+            <p class="lede">We will add your Google account to the Play closed-test list when we process the queue. Watch for an email from Google about testing, then use the opt-in link on the <a href="index.html#android-beta">support page</a> when it is available.</p>
+            <a href="index.html" class="button">Back to support</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Daniel Zhang. All rights reserved.</p>
+            <div class="theme-control">
+                <label for="theme-select-thanks">Appearance</label>
+                <select id="theme-select-thanks" class="theme-select" autocomplete="off">
+                    <option value="system">System</option>
+                    <option value="classic">Classic</option>
+                    <option value="calm">Calm</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    <script src="theme.js"></script>
+</body>
+</html>

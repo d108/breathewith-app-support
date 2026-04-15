@@ -64,20 +64,24 @@
             <h2 id="android-beta-heading">Google Play closed testing</h2>
             <p class="lede">We run a <strong>closed test</strong> before a wide Play release—the same flow Google documents for production access (enough opted-in testers on the track for long enough). Use the <strong>same Google account</strong> everywhere: the one on your phone’s Play Store, your tester list entry, and when you tap opt-in.</p>
             <ol class="play-test-steps">
-                <li><strong>Join the tester list.</strong> Submit the Gmail address that should be added in Play Console, or email us using the button below. If you use a Google Group for your track, join that group first when the admin requires it.</li>
-                <li><strong>Opt in on Google Play.</strong> Open the <strong>shareable link</strong> from Play Console (button below when we’ve pasted it in), or the message Google sends you, then accept becoming a tester. Skipping this step means you are not counted as opted-in.</li>
-                <li><strong>Install from Play.</strong> After opting in, install the app from the Play Store flow for testers (the opt-in page explains where to tap next).</li>
+                <li><strong>Join the tester list.</strong> Enter the Gmail address for your Google account below and tap <strong>Send</strong>. We add it in Play Console. If your track uses a Google Group, join that group when your admin asks.</li>
+                <li><strong>Opt in on Google Play.</strong> Open the <strong>shareable link</strong> from Play Console (button below when available), or the message Google sends you, then accept becoming a tester. Skipping this step means you are not counted as opted-in.</li>
+                <li><strong>Install from Play.</strong> After opting in, install the app from the Play Store flow for testers.</li>
             </ol>
+            <form class="play-test-form" method="POST" action="https://formsubmit.co/support@ikiapps.com" accept-charset="UTF-8">
+                <input type="hidden" name="_subject" value="BreatheWith — Google Play closed test signup">
+                <input type="hidden" name="_next" value="https://d108.github.io/breathewith-app-support/play-test-thanks.html">
+                <input type="hidden" name="_template" value="table">
+                <label for="play-test-email">Google account email (Gmail)</label>
+                <input id="play-test-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@gmail.com">
+                <button type="submit" class="button play-test-send">Send</button>
+            </form>
+            <p class="fine-print">Submissions are delivered by <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. The first time this form is used, FormSubmit sends us a one-time confirmation link we must activate.</p>
             <div class="store-actions play-test-actions">
                 <a class="store-button store-button--play" data-play-opt-in href="#" hidden>Opt in on Google Play</a>
-                <a class="button secondary-button" data-play-waitlist href="#" hidden>Join waitlist</a>
-                <a class="button" data-closed-test-mailto href="#" hidden>Request access by email</a>
             </div>
-            <p class="fine-print play-test-note" data-play-opt-in-pending hidden>When the closed-testing release is live in Play Console, we add the official opt-in link on this page. Until then, use <strong>Request access by email</strong> (or the waitlist, if shown) so we can add your Google account to the tester list.</p>
+            <p class="fine-print play-test-note" data-play-opt-in-pending hidden>When the closed-testing release is live in Play Console, we add the official opt-in link above. Submit your Gmail with the form until then.</p>
             <p class="fine-print">Official overview: <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Set up open, closed, or internal tests</a> (Google Play Console Help).</p>
-            <noscript>
-                <p class="fine-print">Email <strong>support (at) ikiapps (dot) com</strong> with subject <strong>BreatheWith Android closed test request</strong> and your Google account email. After you are on the tester list, use the opt-in link Google sends or that we publish here.</p>
-            </noscript>
         </section>
 
         <section id="faq" class="card">
@@ -104,7 +108,7 @@
             </div>
             <div class="faq-item">
                 <h3>How do I join the Android closed test on Google Play?</h3>
-                <p>Follow <a href="#android-beta">Google Play closed testing</a> above: get your Gmail on the tester list, then open the <strong>opt-in</strong> link (from this site or from Google’s email) and accept. Install from Play after that. See <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Google’s testing guide</a> for how closed tracks work.</p>
+                <p>On <a href="#android-beta">Google Play closed testing</a>, submit your Gmail with the form, then use the <strong>opt-in</strong> link when we publish it or in Google’s email. Install from Play after you accept. See <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Google’s testing guide</a>.</p>
             </div>
         </section>
 
