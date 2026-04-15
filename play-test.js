@@ -1,6 +1,6 @@
 (function () {
     var CONFIG = {
-        optInUrl: ""
+        optInUrl: "https://play.google.com/apps/testing/com.ikisystems.breatheapp.android"
     };
     function trim(s) {
         return (s || "").replace(/^\s+|\s+$/g, "");
