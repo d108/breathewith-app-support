@@ -139,12 +139,13 @@ body {
     margin-bottom: 0;
 }
 
-/* Corners come from the SVG only; drop-shadow follows its alpha edge. */
+/* Matches source 1024×500; scales with column width, no extra stretch. */
 .hero-banner-img {
+    display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
+    aspect-ratio: 1024 / 500;
     filter: drop-shadow(0 12px 28px rgba(7, 26, 35, 0.2)) drop-shadow(0 4px 10px rgba(7, 26, 35, 0.12));
 }
 
