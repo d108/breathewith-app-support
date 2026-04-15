@@ -1,159 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="calm">
-<head>
-    <script>
+<!DOCTYPE html><html lang="en" data-beasties-container><head>
+  <meta charset="utf-8">
+  <title>BreatheWith</title>
+  <base href="/breathewith-app-support/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#91c2bd" id="meta-theme-color">
+  <script>
     (function () {
-        var choice = "classic";
-        try {
-            var K = "breathewith-theme";
-            var raw = localStorage.getItem(K);
-            if (raw === "system" || raw === "classic" || raw === "calm" || raw === "dark") {
-                choice = raw;
-            }
-        } catch (e) {}
-        var resolved = choice === "system"
-            ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "calm")
-            : choice;
-        document.documentElement.setAttribute("data-theme", resolved);
+      var choice = "system";
+      try {
+        var K = "breathewith-theme";
+        var raw = localStorage.getItem(K);
+        if (raw === "system" || raw === "classic" || raw === "calm" || raw === "dark") {
+          choice = raw;
+        }
+      } catch (e) {}
+      var resolved = choice === "system"
+        ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "calm")
+        : choice;
+      document.documentElement.setAttribute("data-theme", resolved);
     })();
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BreatheWith</title>
-    <meta name="description" content="BreatheWith: guided breathing with a visual on-screen guide plus audio and haptics on iPhone, Apple Watch, and Android. Help, FAQs, and support.">
-    <meta name="theme-color" content="#91c2bd" id="meta-theme-color">
-    <link rel="canonical" href="https://d108.github.io/breathewith-app-support/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="BreatheWith">
-    <meta property="og:description" content="Guided breathing with visual, audio, and haptic cues—iPhone, Apple Watch, and Android. Support and FAQs.">
-    <meta property="og:url" content="https://d108.github.io/breathewith-app-support/">
-    <meta property="og:image" content="https://d108.github.io/breathewith-app-support/images/feature-graphic-v1.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BreatheWith">
-    <meta name="twitter:image" content="https://d108.github.io/breathewith-app-support/images/feature-graphic-v1.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header site-header--home">
-        <div class="container hero-banner">
-            <img class="hero-banner-img" src="images/feature-graphic-v1.svg" width="1024" height="500" alt="BreatheWith: calm breathing, quiet focus. Simple tools for a balanced life." decoding="async" fetchpriority="high">
-        </div>
-        <div class="container site-header__nav-bar">
-            <nav class="header-nav header-nav--themed" aria-label="Support sections">
-                <a href="#download">Download</a>
-                <a href="#android-beta">Android test</a>
-                <a href="#faq">FAQ</a>
-                <a href="#support">Contact</a>
-                <a href="privacy-policy.html">Privacy</a>
-            </nav>
-        </div>
-    </header>
+  </script>
+<style>:root{--action-pad-y: .75rem;--action-pad-x: 1.5rem;--action-min-height: 2.75rem;--bg-color: #f4f8f7;--text-primary: #1e2d33;--text-secondary: #5a6b72;--surface: #ffffff;--on-accent: #ffffff;--accent-green: #91c2bd;--accent-green-dark: #6fa89f;--accent-rose: #cfabb9;--accent-rose-dark: #bd93a3;--max-width: 720px;--header-gradient: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-rose) 100%);--card-border: 1px solid rgba(145, 194, 189, .25);--card-shadow: 0 2px 24px rgba(30, 45, 51, .06);--h2-rule: rgba(145, 194, 189, .35);--link-accent: var(--accent-green-dark);--skip-bg: var(--text-primary);--skip-fg: var(--surface)}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:var(--text-primary);background-color:var(--bg-color);min-height:100vh;display:flex;flex-direction:column;transition:background-color .2s ease,color .2s ease}.container{width:min(92%,var(--max-width));margin:0 auto}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;left:-10000px!important;top:0!important}.button,.store-button{cursor:pointer;text-decoration:none}.site-header{background:var(--header-gradient);padding:2.5rem 0 2rem;margin-bottom:2rem}
+</style><link rel="stylesheet" href="styles-S46GUJ42.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-S46GUJ42.css"></noscript><style ng-app-id="ng">[_nghost-ng-c1814350264]{display:flex;flex-direction:column;min-height:100vh}.site-footer[_ngcontent-ng-c1814350264]{margin-top:auto;padding:2.5rem 0;text-align:center;color:var(--text-secondary);font-size:.9rem}.footer-inner[_ngcontent-ng-c1814350264]   p[_ngcontent-ng-c1814350264]{margin-bottom:.35rem}.footer-links[_ngcontent-ng-c1814350264]   a[_ngcontent-ng-c1814350264]{color:var(--text-secondary);text-decoration:none;font-weight:600}.footer-links[_ngcontent-ng-c1814350264]   a[_ngcontent-ng-c1814350264]:hover{color:var(--link-accent);text-decoration:underline}.theme-control[_ngcontent-ng-c1814350264]{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem .75rem;margin-top:1rem}.theme-control[_ngcontent-ng-c1814350264]   label[_ngcontent-ng-c1814350264]{font-size:.88rem;font-weight:600;color:var(--text-secondary)}.theme-select[_ngcontent-ng-c1814350264]{font:inherit;font-size:.92rem;padding:.4rem 2rem .4rem .65rem;border-radius:.5rem;border:1px solid var(--h2-rule);background:var(--surface);color:var(--text-primary);cursor:pointer}</style><style ng-app-id="ng">.site-header--home[_ngcontent-ng-c4194694393]{background:var(--bg-color);color:var(--text-primary);padding:1.5rem 0 0;margin-bottom:0}.hero-banner-img[_ngcontent-ng-c4194694393]{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1024 / 500;filter:drop-shadow(0 12px 28px rgba(7,26,35,.2)) drop-shadow(0 4px 10px rgba(7,26,35,.12))}.main-stack[_ngcontent-ng-c4194694393]{flex:1;padding-bottom:2rem;position:relative}.card[_ngcontent-ng-c4194694393]{background:var(--surface);padding:2rem 1.75rem;border-radius:1.25rem;box-shadow:var(--card-shadow);border:var(--card-border);margin-bottom:1.5rem}h2[_ngcontent-ng-c4194694393]{font-size:1.35rem;margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:2px solid var(--h2-rule);color:var(--accent-green-dark)}.lede[_ngcontent-ng-c4194694393]{color:var(--text-secondary);margin-bottom:1rem;font-size:1.02rem}.fine-print[_ngcontent-ng-c4194694393]{font-size:.9rem;color:var(--text-secondary);margin-top:1rem;line-height:1.5}.store-actions[_ngcontent-ng-c4194694393]{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}.store-button[_ngcontent-ng-c4194694393]{display:inline-flex;align-items:center;justify-content:center;min-height:var(--action-min-height);padding:var(--action-pad-y) var(--action-pad-x);border-radius:.75rem;background:#000;color:#fff;font-weight:600;font-size:.95rem}.store-button--play[_ngcontent-ng-c4194694393]{background:#01875f}.play-test-steps[_ngcontent-ng-c4194694393]{margin:0 0 1.25rem 1.1rem;padding:0;color:var(--text-secondary);font-size:1.02rem;line-height:1.55}.play-test-steps[_ngcontent-ng-c4194694393]   li[_ngcontent-ng-c4194694393]{margin-bottom:.85rem}.play-test-form[_ngcontent-ng-c4194694393]{display:flex;flex-direction:column;gap:.75rem;max-width:min(100%,38rem);margin-top:.75rem}.play-test-form[_ngcontent-ng-c4194694393]   input[type=email][_ngcontent-ng-c4194694393]{font:inherit;padding:.85rem 1rem;border-radius:.5rem;border:1px solid var(--h2-rule);background:var(--surface);color:var(--text-primary)}.button[_ngcontent-ng-c4194694393]{display:inline-flex;align-items:center;justify-content:center;min-height:var(--action-min-height);padding:var(--action-pad-y) var(--action-pad-x);background-color:var(--accent-green);color:var(--on-accent);border-radius:2rem;font-weight:600;border:none;cursor:pointer;text-decoration:none}.secondary-button[_ngcontent-ng-c4194694393]{background-color:var(--accent-rose)}.faq-item[_ngcontent-ng-c4194694393]{margin-bottom:1.75rem}.faq-item[_ngcontent-ng-c4194694393]   h3[_ngcontent-ng-c4194694393]{font-size:1.05rem;margin-bottom:.4rem;color:var(--text-primary);font-weight:600}.faq-item[_ngcontent-ng-c4194694393]   p[_ngcontent-ng-c4194694393]{color:var(--text-secondary)}@media (max-width: 560px){.card[_ngcontent-ng-c4194694393]{padding:1.5rem 1.25rem}}</style><style ng-app-id="ng">.site-header__nav-bar[_ngcontent-ng-c238054886]{position:relative;z-index:1;margin-top:1rem;margin-bottom:2rem;padding:.75rem 1.5rem;background:var(--surface);border:var(--card-border);border-radius:1.25rem;box-shadow:var(--card-shadow)}.header-nav[_ngcontent-ng-c238054886]{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;font-size:.95rem}.header-nav[_ngcontent-ng-c238054886]   a[_ngcontent-ng-c238054886]{color:inherit;text-decoration:none;font-weight:600;border-bottom:2px solid transparent;cursor:pointer;opacity:1;transition:color .2s ease,border-color .2s ease}.header-nav--themed[_ngcontent-ng-c238054886]   a[_ngcontent-ng-c238054886]{color:var(--text-primary)!important}.header-nav--themed[_ngcontent-ng-c238054886]   a[_ngcontent-ng-c238054886]:hover, .header-nav--themed[_ngcontent-ng-c238054886]   a.active[_ngcontent-ng-c238054886]{color:var(--link-accent)!important;border-bottom-color:var(--link-accent)}[_ngcontent-ng-c238054886]:not(.header-nav--themed)   a[_ngcontent-ng-c238054886]{color:var(--on-accent)}[_ngcontent-ng-c238054886]:not(.header-nav--themed)   a[_ngcontent-ng-c238054886]:hover{border-bottom-color:#ffffffa6}.header-nav[_ngcontent-ng-c238054886]   a[_ngcontent-ng-c238054886]:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}@media (max-width: 560px){.site-header__nav-bar[_ngcontent-ng-c238054886]{padding:.65rem 1.25rem}}</style></head>
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["click","change"],["blur"]);</script>
+  <app-root ng-version="19.2.20" _nghost-ng-c1814350264 ngh="2" ng-server-context="ssg"><router-outlet _ngcontent-ng-c1814350264></router-outlet><app-support _nghost-ng-c4194694393 ngh="1"><header _ngcontent-ng-c4194694393 class="site-header site-header--home"><div _ngcontent-ng-c4194694393 class="container hero-banner"><img _ngcontent-ng-c4194694393 src="images/feature-graphic-v1.svg" width="1024" height="500" alt="BreatheWith: calm breathing, quiet focus. Simple tools for a balanced life." decoding="async" fetchpriority="high" class="hero-banner-img"></div><app-navbar _ngcontent-ng-c4194694393 variant="support" _nghost-ng-c238054886 ngh="0"><div _ngcontent-ng-c238054886 class="site-header__nav-bar container"><nav _ngcontent-ng-c238054886 aria-label="Support sections" class="header-nav header-nav--themed"><a _ngcontent-ng-c238054886 routerlink="/" fragment="download" href="/breathewith-app-support/#download" jsaction="click:;">Download</a><a _ngcontent-ng-c238054886 routerlink="/" fragment="android-beta" href="/breathewith-app-support/#android-beta" jsaction="click:;">Android test</a><a _ngcontent-ng-c238054886 routerlink="/" fragment="faq" href="/breathewith-app-support/#faq" jsaction="click:;">FAQ</a><a _ngcontent-ng-c238054886 routerlink="/" fragment="support" href="/breathewith-app-support/#support" jsaction="click:;">Contact</a><a _ngcontent-ng-c238054886 routerlink="/privacy" routerlinkactive="active" href="/breathewith-app-support/privacy" class jsaction="click:;">Privacy</a><!----><!----><!----></nav></div></app-navbar></header><main _ngcontent-ng-c4194694393 id="main" class="container main-stack"><h1 _ngcontent-ng-c4194694393 class="visually-hidden">BreatheWith: help, downloads, and FAQs</h1><section _ngcontent-ng-c4194694393 id="download" aria-labelledby="download-heading" class="card"><h2 _ngcontent-ng-c4194694393 id="download-heading">Download</h2><p _ngcontent-ng-c4194694393 class="lede">BreatheWith is a breathing pacer: you choose a rhythm—box, 4–6, balance, or another preset—and follow an <strong _ngcontent-ng-c4194694393>on-screen visual guide</strong> together with <strong _ngcontent-ng-c4194694393>audio and haptic cues</strong>, so you see the pattern, hear it, and feel it—without counting in your head. It runs on <strong _ngcontent-ng-c4194694393>iPhone</strong> and <strong _ngcontent-ng-c4194694393>Apple Watch</strong> (with iPhone) from the App Store, and on <strong _ngcontent-ng-c4194694393>Android</strong> from Google Play—use the buttons below.</p><div _ngcontent-ng-c4194694393 class="store-actions"><a _ngcontent-ng-c4194694393 href="https://apps.apple.com/us/search?term=BreatheWith" rel="noopener noreferrer" class="store-button">App Store</a><a _ngcontent-ng-c4194694393 href="https://play.google.com/store/search?q=BreatheWith&amp;c=apps" rel="noopener noreferrer" class="store-button store-button--play">Google Play</a></div><p _ngcontent-ng-c4194694393 class="fine-print">If search does not show the app in your region, open the store on your device and search for <strong _ngcontent-ng-c4194694393>BreatheWith</strong> by name.</p></section><section _ngcontent-ng-c4194694393 id="android-beta" aria-labelledby="android-beta-heading" class="card"><h2 _ngcontent-ng-c4194694393 id="android-beta-heading">Google Play closed testing</h2><p _ngcontent-ng-c4194694393 class="lede">We run a <strong _ngcontent-ng-c4194694393>closed test</strong> before a wide Play release—the same flow Google documents for production access (enough opted-in testers on the track for long enough). Use the <strong _ngcontent-ng-c4194694393>same Google account</strong> everywhere: the one on your Android device’s Play Store, your tester list entry, and when you tap opt-in.</p><ol _ngcontent-ng-c4194694393 class="play-test-steps"><li _ngcontent-ng-c4194694393><strong _ngcontent-ng-c4194694393>Join the tester list.</strong> Enter the <strong _ngcontent-ng-c4194694393>email for the Google account</strong> you use on Google Play (often Gmail, or another address if that is your Google account) in the form below and tap <strong _ngcontent-ng-c4194694393>Send</strong>. After we accept your address and add it in Play Console, <strong _ngcontent-ng-c4194694393>we email you</strong> with the opt-in link and what to tap next. You may also get a separate invite from Google Play—either way, you must complete opt-in. If your track uses a Google Group, join that group when your admin asks. <form _ngcontent-ng-c4194694393 method="POST" action="https://formsubmit.co/support@ikiapps.com" accept-charset="UTF-8" class="play-test-form"><input _ngcontent-ng-c4194694393 type="hidden" name="_subject" value="BreatheWith — Google Play closed test signup"><input _ngcontent-ng-c4194694393 type="hidden" name="_next" value="https://d108.github.io/breathewith-app-support/play-test-thanks.html"><input _ngcontent-ng-c4194694393 type="hidden" name="_template" value="table"><label _ngcontent-ng-c4194694393 for="play-test-email">Google account email (same as Play Store on your Android device)</label><input _ngcontent-ng-c4194694393 id="play-test-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Same address as Play Store on Android"><button _ngcontent-ng-c4194694393 type="submit" class="button play-test-send">Send</button></form></li><li _ngcontent-ng-c4194694393><strong _ngcontent-ng-c4194694393>Opt in on Google Play.</strong> Use the link in <strong _ngcontent-ng-c4194694393>our email</strong>, or tap <strong _ngcontent-ng-c4194694393>Opt in on Google Play</strong> below (same URL as the web test link), then confirm in Play. That step turns on access so you can install the test build <strong _ngcontent-ng-c4194694393>at no charge</strong> as a tester. Skipping opt-in means you are not counted as opted-in.</li><li _ngcontent-ng-c4194694393><strong _ngcontent-ng-c4194694393>Install from Play.</strong> After opting in, install the app from the Play Store flow for testers.</li></ol><p _ngcontent-ng-c4194694393 class="fine-print">Submissions are delivered by <a _ngcontent-ng-c4194694393 href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. After we accept your address and add it for testing, <strong _ngcontent-ng-c4194694393>we email you</strong> with the opt-in link so you can complete the step—Google may send its own invite too. Once you’re opted in, you can install on the closed track for free as a tester.</p><div _ngcontent-ng-c4194694393 class="store-actions play-test-actions"><a _ngcontent-ng-c4194694393 rel="noopener noreferrer" class="store-button store-button--play" href="https://play.google.com/apps/testing/com.ikisystems.breatheapp.android">Opt in on Google Play</a></div><!----><!----><p _ngcontent-ng-c4194694393 class="fine-print">Official overview: <a _ngcontent-ng-c4194694393 href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Set up open, closed, or internal tests</a> (Google Play Console Help).</p></section><section _ngcontent-ng-c4194694393 id="faq" class="card"><h2 _ngcontent-ng-c4194694393>Frequently asked questions</h2><div _ngcontent-ng-c4194694393 class="faq-item"><h3 _ngcontent-ng-c4194694393>How do I change the breathing rhythm?</h3><p _ngcontent-ng-c4194694393>On the main screen, tap the <strong>Settings (gear)</strong> icon. Under Breathing Rhythm, pick a preset such as 4–6 Calm, 5–5 Balance, or Box Breathing.</p></div><div _ngcontent-ng-c4194694393 class="faq-item"><h3 _ngcontent-ng-c4194694393>Where are volume and haptic controls?</h3><p _ngcontent-ng-c4194694393>Audio and haptics live on the <strong>Settings</strong> screen. Tap the gear icon, then open <strong>Audio &amp; Haptics</strong> to adjust the metronome or toggles.</p></div><div _ngcontent-ng-c4194694393 class="faq-item"><h3 _ngcontent-ng-c4194694393>Does the app work on Apple Watch?</h3><p _ngcontent-ng-c4194694393>Yes. BreatheWith includes a companion experience for Apple Watch that works with the iPhone app, using haptics to guide your breath on your wrist.</p></div><div _ngcontent-ng-c4194694393 class="faq-item"><h3 _ngcontent-ng-c4194694393>Sound or haptics stopped working — what should I try?</h3><p _ngcontent-ng-c4194694393>Confirm the device is not in Silent Mode (iPhone) or that media volume is up (Android). In the app, revisit <strong>Audio &amp; Haptics</strong> and ensure features are enabled. On Watch, check that haptics are allowed in system settings.</p></div><div _ngcontent-ng-c4194694393 class="faq-item"><h3 _ngcontent-ng-c4194694393>Is there a subscription or data tracking?</h3><p _ngcontent-ng-c4194694393>No. BreatheWith is built for privacy: no analytics SDKs in the app as described in our policy, and your practice data stays on your device. Pricing (one-time purchase or free) depends on region and store listing.</p></div><div _ngcontent-ng-c4194694393 class="faq-item"><h3 _ngcontent-ng-c4194694393>How do I join the Android closed test on Google Play?</h3><p _ngcontent-ng-c4194694393>On Google Play closed testing, send your Google account email with the form. After it’s accepted, <strong>we email you</strong> with the opt-in link. Then install from Play—test installs are free for testers.</p></div><!----></section><section _ngcontent-ng-c4194694393 id="support" class="card"><h2 _ngcontent-ng-c4194694393>Get in touch</h2><p _ngcontent-ng-c4194694393 class="lede">Bug reports and product feedback help us improve BreatheWith. Email us and include your app version and device model when reporting an issue.</p><a _ngcontent-ng-c4194694393 class="button" href="mailto:support@ikiapps.com">Email support</a></section><section _ngcontent-ng-c4194694393 id="privacy" class="card"><h2 _ngcontent-ng-c4194694393>Privacy</h2><p _ngcontent-ng-c4194694393>BreatheWith is designed so your settings and preferences stay on your device. For full legal wording, read the policy linked below.</p><a _ngcontent-ng-c4194694393 routerlink="/privacy" class="button secondary-button" href="/breathewith-app-support/privacy" jsaction="click:;">Read privacy policy</a></section></main></app-support><!----><footer _ngcontent-ng-c1814350264 class="site-footer"><div _ngcontent-ng-c1814350264 class="container footer-inner"><p _ngcontent-ng-c1814350264>© 2026 Daniel Zhang. All rights reserved.</p><p _ngcontent-ng-c1814350264 class="footer-links"><a _ngcontent-ng-c1814350264 routerlink="/" href="/breathewith-app-support/" jsaction="click:;">Support</a><span _ngcontent-ng-c1814350264 aria-hidden="true"> · </span><a _ngcontent-ng-c1814350264 routerlink="/privacy" href="/breathewith-app-support/privacy" jsaction="click:;">Privacy</a></p><div _ngcontent-ng-c1814350264 class="theme-control"><label _ngcontent-ng-c1814350264 for="theme-select">Appearance</label><select _ngcontent-ng-c1814350264 id="theme-select" class="theme-select ng-untouched ng-pristine ng-valid" jsaction="change:;blur:;"><option _ngcontent-ng-c1814350264 value="system">System</option><option _ngcontent-ng-c1814350264 value="classic">Classic</option><option _ngcontent-ng-c1814350264 value="calm">Calm</option><option _ngcontent-ng-c1814350264 value="dark">Dark</option></select></div></div></footer></app-root>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-LNLW77VT.js" type="module"></script>
 
-    <main id="main" class="container main-stack">
-        <h1 class="visually-hidden">BreatheWith: help, downloads, and FAQs</h1>
-        <section id="download" class="card" aria-labelledby="download-heading">
-            <h2 id="download-heading">Download</h2>
-            <p class="lede">BreatheWith is a breathing pacer: you choose a rhythm—box, 4–6, balance, or another preset—and follow an <strong>on-screen visual guide</strong> together with <strong>audio and haptic cues</strong>, so you see the pattern, hear it, and feel it—without counting in your head. It runs on <strong>iPhone</strong> and <strong>Apple Watch</strong> (with iPhone) from the App Store, and on <strong>Android</strong> from Google Play—use the buttons below.</p>
-            <div class="store-actions">
-                <a class="store-button" href="https://apps.apple.com/us/search?term=BreatheWith" rel="noopener noreferrer">App Store</a>
-                <a class="store-button store-button--play" href="https://play.google.com/store/search?q=BreatheWith&amp;c=apps" rel="noopener noreferrer">Google Play</a>
-            </div>
-            <p class="fine-print">If search does not show the app in your region, open the store on your device and search for <strong>BreatheWith</strong> by name.</p>
-        </section>
-
-        <section id="android-beta" class="card" aria-labelledby="android-beta-heading">
-            <h2 id="android-beta-heading">Google Play closed testing</h2>
-            <p class="lede">We run a <strong>closed test</strong> before a wide Play release—the same flow Google documents for production access (enough opted-in testers on the track for long enough). Use the <strong>same Google account</strong> everywhere: the one on your Android device’s Play Store, your tester list entry, and when you tap opt-in.</p>
-            <ol class="play-test-steps">
-                <li>
-                    <strong>Join the tester list.</strong> Enter the <strong>email for the Google account</strong> you use on Google Play (often Gmail, or another address if that is your Google account) in the form below and tap <strong>Send</strong>. After we accept your address and add it in Play Console, <strong>we email you</strong> with the opt-in link and what to tap next. You may also get a separate invite from Google Play—either way, you must complete opt-in. If your track uses a Google Group, join that group when your admin asks.
-                    <form class="play-test-form" method="POST" action="https://formsubmit.co/support@ikiapps.com" accept-charset="UTF-8">
-                        <input type="hidden" name="_subject" value="BreatheWith — Google Play closed test signup">
-                        <input type="hidden" name="_next" value="https://d108.github.io/breathewith-app-support/play-test-thanks.html">
-                        <input type="hidden" name="_template" value="table">
-                        <label for="play-test-email">Google account email (same as Play Store on your Android device)</label>
-                        <input id="play-test-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Same address as Play Store on Android">
-                        <button type="submit" class="button play-test-send">Send</button>
-                    </form>
-                </li>
-                <li><strong>Opt in on Google Play.</strong> Use the link in <strong>our email</strong>, or tap <strong>Opt in on Google Play</strong> below (same URL as the web test link), then confirm in Play. That step turns on access so you can install the test build <strong>at no charge</strong> as a tester. Skipping opt-in means you are not counted as opted-in.</li>
-                <li><strong>Install from Play.</strong> After opting in, install the app from the Play Store flow for testers.</li>
-            </ol>
-            <p class="fine-print">Submissions are delivered by <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. After we accept your address and add it for testing, <strong>we email you</strong> with the opt-in link so you can complete the step—Google may send its own invite too. Once you’re opted in, you can install on the closed track for free as a tester.</p>
-            <div class="store-actions play-test-actions">
-                <a class="store-button store-button--play" data-play-opt-in href="#" hidden>Opt in on Google Play</a>
-            </div>
-            <p class="fine-print play-test-note" data-play-opt-in-pending hidden>If the <strong>Opt in on Google Play</strong> button is missing above, this page does not yet have the test link configured—use the form with your Google account email and watch for <strong>our email</strong> with instructions.</p>
-            <p class="fine-print">Official overview: <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Set up open, closed, or internal tests</a> (Google Play Console Help).</p>
-        </section>
-
-        <section id="faq" class="card">
-            <h2>Frequently asked questions</h2>
-            <div class="faq-item">
-                <h3>How do I change the breathing rhythm?</h3>
-                <p>On the main screen, tap the <strong>Settings (gear)</strong> icon. Under Breathing Rhythm, pick a preset such as 4–6 Calm, 5–5 Balance, or Box Breathing.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Where are volume and haptic controls?</h3>
-                <p>Audio and haptics live on the <strong>Settings</strong> screen. Tap the gear icon, then open <strong>Audio &amp; Haptics</strong> to adjust the metronome or toggles.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Does the app work on Apple Watch?</h3>
-                <p>Yes. BreatheWith includes a companion experience for Apple Watch that works with the iPhone app, using haptics to guide your breath on your wrist.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Sound or haptics stopped working — what should I try?</h3>
-                <p>Confirm the device is not in Silent Mode (iPhone) or that media volume is up (Android). In the app, revisit <strong>Audio &amp; Haptics</strong> and ensure features are enabled. On Watch, check that haptics are allowed in system settings.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is there a subscription or data tracking?</h3>
-                <p>No. BreatheWith is built for privacy: no analytics SDKs in the app as described in our policy, and your practice data stays on your device. Pricing (one-time purchase or free) depends on region and store listing.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I join the Android closed test on Google Play?</h3>
-                <p>On <a href="#android-beta">Google Play closed testing</a>, send your Google account email with the form. After it’s accepted, <strong>we email you</strong> with the opt-in link (Google may email you too). Then install from Play—test installs are free for testers on the closed track. You can also use <strong>Opt in on Google Play</strong> on this page. See <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Google’s testing guide</a>.</p>
-            </div>
-        </section>
-
-        <section id="support" class="card">
-            <h2>Get in touch</h2>
-            <p class="lede">Bug reports and product feedback help us improve BreatheWith. Email us and include your app version and device model when reporting an issue.</p>
-            <a id="support-email-btn" class="button" data-email-link href="#" hidden>Email support</a>
-            <noscript>
-                <p class="fine-print">Support: <strong>support (at) ikiapps (dot) com</strong></p>
-            </noscript>
-        </section>
-
-        <section id="privacy" class="card">
-            <h2>Privacy</h2>
-            <p>BreatheWith is designed so your settings and preferences stay on your device. For full legal wording, read the policy linked below.</p>
-            <a href="privacy-policy.html" class="button secondary-button">Read privacy policy</a>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; 2026 Daniel Zhang. All rights reserved.</p>
-            <p class="footer-links">
-                <a href="index.html">Support</a>
-                <span aria-hidden="true"> · </span>
-                <a href="privacy-policy.html">Privacy</a>
-            </p>
-            <div class="theme-control">
-                <label for="theme-select">Appearance</label>
-                <select id="theme-select" class="theme-select" autocomplete="off">
-                    <option value="system">System</option>
-                    <option value="classic">Classic</option>
-                    <option value="calm">Calm</option>
-                    <option value="dark">Dark</option>
-                </select>
-            </div>
-        </div>
-    </footer>
-    <script src="email.js"></script>
-    <script src="play-test.js"></script>
-    <script src="theme.js"></script>
-</body>
-</html>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"2":"t0","3":"t1"},"c":{"2":[{"i":"t0","r":6,"e":{"0":5}}],"3":[]}},{"t":{"96":"t2","97":"t3","106":"t4"},"c":{"96":[{"i":"t2","r":1}],"97":[],"106":[{"i":"t4","r":1,"x":6}]}},{"c":{"0":[{"i":"c4194694393","r":1}]}}]}</script></body></html>
