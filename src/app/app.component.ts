@@ -38,6 +38,8 @@ import { FormsModule } from '@angular/forms';
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      min-width: 0;
+      width: 100%;
     }
 
     .site-footer {

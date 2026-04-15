@@ -80,6 +80,18 @@ body {
     margin: 0 auto;
 }
 
+/* Routed views sit beside router-outlet under flex column app-root. Custom
+   elements default to display:inline, so used width becomes shrink-to-fit
+   from max-content (e.g. 1024px SVG) and overflows narrow viewports. */
+app-support,
+app-privacy,
+app-thanks,
+app-not-found {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;

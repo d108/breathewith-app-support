@@ -9,8 +9,8 @@ import { RouterLink } from '@angular/router';
   imports: [NavbarComponent, CommonModule, RouterLink],
   template: `
     <header class="site-header site-header--home">
-      <div class="container hero-banner">
-        <img class="hero-banner-img" src="images/feature-graphic-v1.svg" width="1024" height="500" alt="BreatheWith: calm breathing, quiet focus. Simple tools for a balanced life." decoding="async" fetchpriority="high">
+      <div class="container">
+        <img class="hero-banner-img" src="images/feature-graphic-v1.svg" width="1104" height="500" alt="BreatheWith: calm breathing, quiet focus. Simple tools for a balanced life." decoding="async" fetchpriority="high">
       </div>
       <app-navbar [minimal]="false" variant="support"></app-navbar>
     </header>
@@ -89,7 +89,6 @@ import { RouterLink } from '@angular/router';
       width: 100%;
       max-width: 100%;
       height: auto;
-      aspect-ratio: 1024 / 500;
       filter: drop-shadow(0 12px 28px rgba(7, 26, 35, 0.2)) drop-shadow(0 4px 10px rgba(7, 26, 35, 0.12));
     }
 

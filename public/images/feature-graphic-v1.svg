@@ -1,6 +1,6 @@
-<svg width="1024" height="500" viewBox="0 0 1024 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1104" height="500" viewBox="0 0 1104 500" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="120" y1="40" x2="936" y2="472" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="120" y1="40" x2="1008" y2="472" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#071A23"/>
       <stop offset="0.45" stop-color="#0C2B38"/>
       <stop offset="1" stop-color="#1D2338"/>
@@ -25,7 +25,7 @@
       <stop offset="0.5" stop-color="#C5F1E7" stop-opacity="0.95"/>
       <stop offset="1" stop-color="#F5D6E0" stop-opacity="0.2"/>
     </linearGradient>
-    <filter id="blur32" x="-80" y="-80" width="1184" height="660" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="blur32" x="-80" y="-80" width="1264" height="660" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="32"/>
     </filter>
     <filter id="glow" x="154" y="80" width="292" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -33,9 +33,9 @@
     </filter>
   </defs>
 
-  <rect width="1024" height="500" rx="36" fill="url(#bg)"/>
-  <rect width="1024" height="500" rx="36" fill="url(#auraLeft)"/>
-  <rect width="1024" height="500" rx="36" fill="url(#auraRight)"/>
+  <rect width="1104" height="500" rx="36" fill="url(#bg)"/>
+  <rect width="1104" height="500" rx="36" fill="url(#auraLeft)"/>
+  <rect width="1104" height="500" rx="36" fill="url(#auraRight)"/>
 
   <g opacity="0.65" filter="url(#blur32)">
     <circle cx="151" cy="106" r="34" fill="#91C2BD"/>
@@ -71,7 +71,7 @@
     <text x="540" y="220" fill="#F6FFFC" font-size="66" font-family="Avenir Next, Avenir, Helvetica Neue, Arial, sans-serif" font-weight="600" letter-spacing="-1.5">
       BreatheWith
     </text>
-    <text x="544" y="266" fill="#BFE2DC" font-size="20" font-family="Avenir Next, Avenir, Helvetica Neue, Arial, sans-serif" font-weight="500" letter-spacing="3.4">
+    <text x="544" y="266" fill="#BFE2DC" font-size="20" font-family="Avenir Next, Avenir, Helvetica Neue, Arial, sans-serif" font-weight="500" letter-spacing="2.2">
       CALM BREATHING. QUIET FOCUS.
     </text>
   </g>
