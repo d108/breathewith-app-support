@@ -246,6 +246,11 @@ h2 {
     line-height: 1.5;
 }
 
+.card .fine-print a {
+    color: var(--link-accent);
+    font-weight: 600;
+}
+
 .store-actions {
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +285,34 @@ h2 {
 
 .store-button--play {
     background: #01875f;
+}
+
+.play-test-steps {
+    margin: 0 0 1.25rem 1.1rem;
+    padding: 0;
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    line-height: 1.55;
+}
+
+.play-test-steps li {
+    margin-bottom: 0.85rem;
+}
+
+.play-test-steps li:last-child {
+    margin-bottom: 0;
+}
+
+.play-test-steps strong {
+    color: var(--text-primary);
+}
+
+.play-test-actions {
+    margin-top: 0.25rem;
+}
+
+.play-test-note {
+    margin-top: 0.75rem;
 }
 
 .faq-item {
