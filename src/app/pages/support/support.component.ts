@@ -33,20 +33,20 @@ import { RouterLink } from '@angular/router';
         <p class="lede">We run a <strong>closed test</strong> before a wide Play release—the same flow Google documents for production access (enough opted-in testers on the track for long enough). Use the <strong>same Google account</strong> everywhere: the one on your Android device’s Play Store, your tester list entry, and when you tap opt-in.</p>
         <ol class="play-test-steps">
           <li>
-            <strong>Join the tester list.</strong> Enter the <strong>email for the Google account</strong> you use on Google Play (often Gmail, or another address if that is your Google account) in the form below and tap <strong>Send</strong>. After we accept your address and add it in Play Console, <strong>we email you</strong> with the opt-in link and what to tap next. You may also get a separate invite from Google Play—either way, you must complete opt-in. If your track uses a Google Group, join that group when your admin asks.
+            <strong>Join the tester list.</strong> Enter the <strong>email for the Google account</strong> you use on Google Play (often Gmail, or another address if that is your Google account) in the form below and tap <strong>Send</strong>. After we accept your address and add it in Play Console, <strong>complete opt-in</strong> using the <strong>Opt in on Google Play</strong> link later on this page or the <strong>same URL</strong> we email you—we send that message so you have the link in your inbox. You may also get a separate invite from Google Play; you still must finish opt-in in Play. If your track uses a Google Group, join that group when your admin asks.
             <form class="play-test-form" method="POST" action="https://formsubmit.co/support@ikiapps.com" accept-charset="UTF-8">
               <input type="hidden" name="_subject" value="BreatheWith — Google Play closed test signup">
-              <input type="hidden" name="_next" value="https://d108.github.io/breathewith-app-support/play-test-thanks.html">
+              <input type="hidden" name="_next" value="https://d108.github.io/breathewith-app-support/thanks">
               <input type="hidden" name="_template" value="table">
               <label for="play-test-email">Google account email (same as Play Store on your Android device)</label>
               <input id="play-test-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Same address as Play Store on Android">
               <button type="submit" class="button play-test-send">Send</button>
             </form>
           </li>
-          <li><strong>Opt in on Google Play.</strong> Use the link in <strong>our email</strong>, or tap <strong>Opt in on Google Play</strong> below (same URL as the web test link), then confirm in Play. That step turns on access so you can install the test build <strong>at no charge</strong> as a tester. Skipping opt-in means you are not counted as opted-in.</li>
+          <li><strong>Opt in on Google Play.</strong> Once you are on the tester list, tap <strong>Opt in on Google Play</strong> below (the public closed-test link on this site) <strong>or</strong> open the same link from <strong>our email</strong>—either path is the same URL—then confirm in Play. That step turns on access so you can install the test build <strong>at no charge</strong> as a tester. Skipping opt-in means you are not counted as opted-in.</li>
           <li><strong>Install from Play.</strong> After opting in, install the app from the Play Store flow for testers.</li>
         </ol>
-        <p class="fine-print">Submissions are delivered by <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. After we accept your address and add it for testing, <strong>we email you</strong> with the opt-in link so you can complete the step—Google may send its own invite too. Once you’re opted in, you can install on the closed track for free as a tester.</p>
+        <p class="fine-print">Submissions are delivered by <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. After we accept your address, the <strong>opt-in link is on this page</strong> (<strong>Opt in on Google Play</strong> below) and <strong>we email you the same link</strong> so you can open it from your inbox—Google may send its own invite too. Once you’re opted in, you can install on the closed track for free as a tester.</p>
         
         <div class="store-actions play-test-actions" *ngIf="optInUrl">
           <a class="store-button store-button--play" [href]="optInUrl" rel="noopener noreferrer">Opt in on Google Play</a>
@@ -232,7 +232,7 @@ export class SupportComponent implements OnInit {
     { q: 'Does the app work on Apple Watch?', a: 'Yes. BreatheWith includes a companion experience for Apple Watch that works with the iPhone app, using haptics to guide your breath on your wrist.' },
     { q: 'Sound or haptics stopped working — what should I try?', a: 'Confirm the device is not in Silent Mode (iPhone) or that media volume is up (Android). In the app, revisit <strong>Audio & Haptics</strong> and ensure features are enabled. On Watch, check that haptics are allowed in system settings.' },
     { q: 'Is there a subscription or data tracking?', a: 'No. BreatheWith is built for privacy: no analytics SDKs in the app as described in our policy, and your practice data stays on your device. Pricing (one-time purchase or free) depends on region and store listing.' },
-    { q: 'How do I join the Android closed test on Google Play?', a: 'On Google Play closed testing, send your Google account email with the form. After it’s accepted, <strong>we email you</strong> with the opt-in link. Then install from Play—test installs are free for testers.' }
+    { q: 'How do I join the Android closed test on Google Play?', a: 'Send your Google account email with the form. After you are added to the tester list, use <strong>Opt in on Google Play</strong> on this support page (closed testing section) or the <strong>same link</strong> in our email, complete opt-in in Play, then install—test installs are free for testers.' }
   ];
 
   ngOnInit() {

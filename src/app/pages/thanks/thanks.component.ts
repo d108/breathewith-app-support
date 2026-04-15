@@ -18,7 +18,7 @@ import { RouterLink } from '@angular/router';
     <main class="container main-stack">
       <section class="card" aria-labelledby="thanks-heading">
         <h2 id="thanks-heading">What happens next</h2>
-        <p class="lede">We’ll add your Google account to the closed-test list when we process the queue. <strong>After your address is accepted,</strong> we’ll email you with the opt-in link and steps (Google may send a separate Play invite). Complete opt-in, then you can install from Play <strong>for free</strong> on the test track. You can also use <strong>Opt in on Google Play</strong> on the <a routerLink="/" fragment="android-beta">support page</a> when we’ve shared that link.</p>
+        <p class="lede">We’ll add your Google account to the closed-test list as we process signups. <strong>After your address is accepted in Play Console,</strong> the only step you need is to <strong>complete opt-in in Google Play</strong>: tap <strong>Opt in on Google Play</strong> on the <a routerLink="/" fragment="android-beta">support page</a> (that link is already live in the closed-testing section), or use the <strong>same opt-in URL</strong> we email you—we send that email so you have the link in your inbox too. Google may send a separate Play invite; you still finish opt-in in Play the same way. Then install the test build <strong>for free</strong> from the tester install flow.</p>
         <a routerLink="/" class="button">Back to support</a>
       </section>
     </main>
