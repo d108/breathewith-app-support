@@ -22,10 +22,10 @@ import { RouterLink } from '@angular/router';
         <h2 id="download-heading">Download</h2>
         <p class="lede">BreatheWith is a breathing pacer: you choose a rhythm—box, 4–6, balance, or another preset—and follow an <strong>on-screen visual guide</strong> together with <strong>audio and haptic cues</strong>, so you see the pattern, hear it, and feel it—without counting in your head. It runs on <strong>iPhone</strong> and <strong>Apple Watch</strong> (with iPhone) from the App Store, and on <strong>Android</strong> from Google Play—use the buttons below.</p>
         <div class="store-actions">
-          <a class="store-button" href="https://apps.apple.com/us/search?term=BreatheWith" rel="noopener noreferrer">App Store</a>
-          <a class="store-button store-button--play" href="https://play.google.com/store/search?q=BreatheWith&amp;c=apps" rel="noopener noreferrer">Google Play</a>
+          <a class="store-badge" href="https://apps.apple.com/us/app/breathewith/id6762160277" rel="noopener noreferrer" aria-label="Download on the App Store"><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="40"></a>
+          <a class="store-badge" [href]="optInUrl" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="40"></a>
         </div>
-        <p class="fine-print">If search does not show the app in your region, open the store on your device and search for <strong>BreatheWith</strong> by name.</p>
+        <p class="fine-print">If a store link does not show the listing in your region, open the store on your device and search for <strong>BreatheWith</strong> by name.</p>
       </section>
 
       <section id="android-beta" class="card" aria-labelledby="android-beta-heading">
@@ -49,7 +49,7 @@ import { RouterLink } from '@angular/router';
         <p class="fine-print">Submissions are delivered by <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. After we accept your address, the <strong>opt-in link is on this page</strong> (<strong>Opt in on Google Play</strong> below) and <strong>we email you the same link</strong> so you can open it from your inbox—Google may send its own invite too. Once you’re opted in, you can install on the closed track for free as a tester.</p>
         
         <div class="store-actions play-test-actions" *ngIf="optInUrl">
-          <a class="store-button store-button--play" [href]="optInUrl" rel="noopener noreferrer">Opt in on Google Play</a>
+          <a class="store-badge" [href]="optInUrl" rel="noopener noreferrer" aria-label="Opt in on Google Play"><img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="40"></a>
         </div>
         <p class="fine-print play-test-note" *ngIf="!optInUrl">If the <strong>Opt in on Google Play</strong> button is missing above, this page does not yet have the test link configured—use the form with your Google account email and watch for <strong>our email</strong> with instructions.</p>
         <p class="fine-print">Official overview: <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Set up open, closed, or internal tests</a> (Google Play Console Help).</p>
@@ -131,26 +131,21 @@ import { RouterLink } from '@angular/router';
     .store-actions {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 0.75rem;
       margin-top: 0.5rem;
     }
 
-    .store-button {
+    .store-badge {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: var(--action-min-height);
-      padding: var(--action-pad-y) var(--action-pad-x);
-      border-radius: 0.75rem;
-      background: #000000;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 0.95rem;
+    }
+    .store-badge img {
+      display: block;
+      height: 40px;
+      width: auto;
     }
 
-    .store-button--play {
-      background: #01875f;
-    }
 
     .play-test-steps {
       margin: 0 0 1.25rem 1.1rem;
