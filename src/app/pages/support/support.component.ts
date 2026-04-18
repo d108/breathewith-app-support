@@ -20,7 +20,7 @@ import { RouterLink } from '@angular/router';
       
       <section id="download" class="card" aria-labelledby="download-heading">
         <h2 id="download-heading">Download</h2>
-        <p class="lede">BreatheWith is a breathing pacer: you choose a rhythm—box, 4–6, balance, or another preset—and follow an <strong>on-screen visual guide</strong> together with <strong>audio and haptic cues</strong>, so you see the pattern, hear it, and feel it—without counting in your head. It runs on <strong>iPhone</strong> and <strong>Apple Watch</strong> (with iPhone) from the App Store, and on <strong>Android</strong> from Google Play—use the buttons below.</p>
+        <p class="lede">BreatheWith is a breathing pacer: you choose a rhythm—box, 4–6, balance, or another preset—and follow an <strong>on-screen visual guide</strong> together with <strong>audio and haptic cues</strong>, so you see the pattern, hear it, and feel it—instead of just counting in your head. It runs on <strong>iOS</strong> (<strong>iPhone</strong>, <strong>iPad</strong>) and <strong>Apple Watch</strong> (with iPhone) from the App Store, and on <strong>Android</strong> from Google Play—use the buttons below.</p>
         <div class="store-actions">
           <a class="store-badge" href="https://apps.apple.com/us/app/breathewith/id6762160277" rel="noopener noreferrer" aria-label="Download on the App Store"><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="40"></a>
           <a class="store-badge" [href]="optInUrl" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="40"></a>
@@ -28,30 +28,29 @@ import { RouterLink } from '@angular/router';
         <p class="fine-print">If a store link does not show the listing in your region, open the store on your device and search for <strong>BreatheWith</strong> by name.</p>
       </section>
 
-      <section id="android-beta" class="card" aria-labelledby="android-beta-heading">
-        <h2 id="android-beta-heading">Google Play closed testing</h2>
-        <p class="lede">We run a <strong>closed test</strong> before a wide Play release—the same flow Google documents for production access (enough opted-in testers on the track for long enough). Use the <strong>same Google account</strong> everywhere: the one on your Android device’s Play Store, your tester list entry, and when you tap opt-in.</p>
-        <ol class="play-test-steps">
-          <li>
-            <strong>Join the tester list.</strong> Enter the <strong>email for the Google account</strong> you use on Google Play (often Gmail, or another address if that is your Google account) in the form below and tap <strong>Send</strong>. After we accept your address and add it in Play Console, <strong>complete opt-in</strong> using the <strong>Opt in on Google Play</strong> link later on this page or the <strong>same URL</strong> we email you—we send that message so you have the link in your inbox. You may also get a separate invite from Google Play; you still must finish opt-in in Play. If your track uses a Google Group, join that group when your admin asks.
-            <form class="play-test-form" method="POST" action="https://formsubmit.co/support@ikiapps.com" accept-charset="UTF-8">
-              <input type="hidden" name="_subject" value="BreatheWith — Google Play closed test signup">
-              <input type="hidden" name="_next" value="https://d108.github.io/breathewith-app-support/thanks">
-              <input type="hidden" name="_template" value="table">
-              <label for="play-test-email">Google account email (same as Play Store on your Android device)</label>
-              <input id="play-test-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Same address as Play Store on Android">
-              <button type="submit" class="button play-test-send">Send</button>
-            </form>
-          </li>
-          <li><strong>Opt in on Google Play.</strong> Once you are on the tester list, tap <strong>Opt in on Google Play</strong> below (the public closed-test link on this site) <strong>or</strong> open the same link from <strong>our email</strong>—either path is the same URL—then confirm in Play. That step turns on access so you can install the test build <strong>at no charge</strong> as a tester. Skipping opt-in means you are not counted as opted-in.</li>
-          <li><strong>Install from Play.</strong> After opting in, install the app from the Play Store flow for testers.</li>
-        </ol>
-        <p class="fine-print">Submissions are delivered by <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to our support inbox. After we accept your address, the <strong>opt-in link is on this page</strong> (<strong>Opt in on Google Play</strong> below) and <strong>we email you the same link</strong> so you can open it from your inbox—Google may send its own invite too. Once you’re opted in, you can install on the closed track for free as a tester.</p>
+      <section id="community" class="card" aria-labelledby="community-heading">
+        <h2 id="community-heading">Join the community</h2>
+        <p class="lede">The <a href="https://groups.google.com/g/breathewith" rel="noopener noreferrer">BreatheWith Google Group</a> is our hub for all users to share feedback, request features, and stay updated on the latest news. Membership is open to the public.</p>
         
-        <div class="store-actions play-test-actions" *ngIf="optInUrl">
-          <a class="store-badge" [href]="optInUrl" rel="noopener noreferrer" aria-label="Opt in on Google Play"><img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="40"></a>
+        <div id="android-early-access" class="early-access-note">
+          <h3>Android Early Access</h3>
+          <p>We are currently in the <strong>Early Access</strong> phase on Android. <strong>Joining the Google Group is required</strong> to gain access to the Early Access build on Google Play. Once you have joined and been approved, follow these steps to install:</p>
+          
+          <ol class="play-test-steps">
+            <li>
+              <strong>Get it on Google Play.</strong> Once you have joined and been approved, tap the <strong>Get it on Google Play</strong> button.
+              <div class="store-actions play-test-actions" *ngIf="optInUrl">
+                <a class="store-badge" [href]="optInUrl" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="40"></a>
+              </div>
+            </li>
+            <li>
+              <strong>Become a tester.</strong> When you open the link, you will be asked to choose <strong>Become a tester</strong>. This step turns on your access so you can install the Early Access build <strong>at no charge</strong>.
+            </li>
+            <li><strong>Install from Play.</strong> After becoming a tester, install the app from the Play Store.</li>
+          </ol>
+          <p class="fine-print">You can <strong>Leave Early Access</strong> at any time using the button on the Play Store page, but we prefer you stay to receive updates.</p>
         </div>
-        <p class="fine-print play-test-note" *ngIf="!optInUrl">If the <strong>Opt in on Google Play</strong> button is missing above, this page does not yet have the test link configured—use the form with your Google account email and watch for <strong>our email</strong> with instructions.</p>
+        
         <p class="fine-print">Official overview: <a href="https://support.google.com/googleplay/android-developer/answer/9845334" rel="noopener noreferrer">Set up open, closed, or internal tests</a> (Google Play Console Help).</p>
       </section>
 
@@ -148,32 +147,41 @@ import { RouterLink } from '@angular/router';
 
 
     .play-test-steps {
-      margin: 0 0 1.25rem 1.1rem;
+      margin: 0 0 1.5rem 1.25rem;
       padding: 0;
       color: var(--text-secondary);
       font-size: 1.02rem;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .play-test-steps li {
-      margin-bottom: 0.85rem;
+      margin-bottom: 1.25rem;
     }
 
-    .play-test-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      max-width: min(100%, 38rem);
+    .early-access-note {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: rgba(var(--accent-green-rgb), 0.05);
+      border: 1px solid rgba(var(--accent-green-rgb), 0.2);
+      border-radius: 1rem;
+    }
+
+    .early-access-note h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--accent-green-dark);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .early-access-note p {
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .play-test-actions {
       margin-top: 0.75rem;
-    }
-
-    .play-test-form input[type="email"] {
-      font: inherit;
-      padding: 0.85rem 1rem;
-      border-radius: 0.5rem;
-      border: 1px solid var(--h2-rule);
-      background: var(--surface);
-      color: var(--text-primary);
     }
 
     .button {
@@ -223,11 +231,11 @@ export class SupportComponent implements OnInit {
 
   faqs = [
     { q: 'How do I change the breathing rhythm?', a: 'On the main screen, tap the <strong>Settings (gear)</strong> icon. Under Breathing Rhythm, pick a preset such as 4–6 Calm, 5–5 Balance, or Box Breathing.' },
-    { q: 'Where are volume and haptic controls?', a: 'Audio and haptics live on the <strong>Settings</strong> screen. Tap the gear icon, then open <strong>Audio & Haptics</strong> to adjust the metronome or toggles.' },
-    { q: 'Does the app work on Apple Watch?', a: 'Yes. BreatheWith includes a companion experience for Apple Watch that works with the iPhone app, using haptics to guide your breath on your wrist.' },
-    { q: 'Sound or haptics stopped working — what should I try?', a: 'Confirm the device is not in Silent Mode (iPhone) or that media volume is up (Android). In the app, revisit <strong>Audio & Haptics</strong> and ensure features are enabled. On Watch, check that haptics are allowed in system settings.' },
+    { q: 'Where are volume and haptic controls?', a: 'On <strong>iPhone</strong> and <strong>Android</strong>, the <strong>Metronome</strong> on/off switch is on the <strong>main screen</strong>, while the <strong>metronome volume</strong> slider and <strong>Haptic Feedback</strong> toggle are on the <strong>Settings</strong> screen. On <strong>Apple Watch</strong>, the audio and haptic feedback controls are grouped together on the <strong>main watch screen</strong>.' },
+    { q: 'Does the app work on Apple Watch?', a: 'Yes. BreatheWith includes a companion experience for Apple Watch that works with the iOS (iPhone) app, using haptics to guide your breath on your wrist.' },
+    { q: 'Sound or haptics stopped working — what should I try?', a: 'On <strong>iPhone</strong> and <strong>Android</strong>, first check the <strong>Metronome</strong> toggle on the <strong>main screen</strong>, then open <strong>Settings</strong> and confirm the <strong>metronome volume</strong> is up and <strong>Haptic Feedback</strong> is turned on. On <strong>Apple Watch</strong>, check the feedback toggles on the <strong>main watch screen</strong>. If needed, also confirm your device is not muted or set too low for the kind of feedback you expect, and on Apple Watch confirm haptics are allowed in system settings.' },
     { q: 'Is there a subscription or data tracking?', a: 'No. BreatheWith is built for privacy: no analytics SDKs in the app as described in our policy, and your practice data stays on your device. Pricing (one-time purchase or free) depends on region and store listing.' },
-    { q: 'How do I join the Android closed test on Google Play?', a: 'Send your Google account email with the form. After you are added to the tester list, use <strong>Opt in on Google Play</strong> on this support page (closed testing section) or the <strong>same link</strong> in our email, complete opt-in in Play, then install—test installs are free for testers.' }
+    { q: 'How do I join Android Early Access on Google Play?', a: 'Join our <a href="https://groups.google.com/g/breathewith" rel="noopener noreferrer">Google Group</a>. Once you are a member, use the <strong>Get it on Google Play</strong> button on this support page, choose <strong>Become a tester</strong> in Play, then install—early access is free for testers.' }
   ];
 
   ngOnInit() {

@@ -10,6 +10,7 @@ html[data-theme="calm"] {
     --surface: #ffffff;
     --on-accent: #ffffff;
     --accent-green: #91c2bd;
+    --accent-green-rgb: 145, 194, 189;
     --accent-green-dark: #6fa89f;
     --accent-rose: #cfabb9;
     --accent-rose-dark: #bd93a3;
@@ -41,6 +42,7 @@ html[data-theme="dark"] {
     --text-secondary: #94a3ad;
     --surface: #1a2328;
     --accent-green: #7ebfb5;
+    --accent-green-rgb: 126, 191, 181;
     --accent-green-dark: #5da89c;
     --accent-rose: #c49aad;
     --accent-rose-dark: #a67f95;
@@ -100,7 +102,6 @@ a:focus-visible {
    from max-content (e.g. 1024px SVG) and overflows narrow viewports. */
 app-support,
 app-privacy,
-app-thanks,
 app-not-found {
     display: block;
     width: 100%;

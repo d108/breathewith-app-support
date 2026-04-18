@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
         <ng-container *ngIf="variant === 'support'">
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
           <a routerLink="/" fragment="download">Download</a>
-          <a routerLink="/" fragment="android-beta">Android test</a>
+          <a routerLink="/" fragment="community">Community</a>
           <a routerLink="/" fragment="faq">FAQ</a>
           <a routerLink="/" fragment="support">Contact</a>
           <a routerLink="/privacy" routerLinkActive="active">Privacy</a>

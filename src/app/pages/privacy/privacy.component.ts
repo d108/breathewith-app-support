@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
       <section class="card policy-section">
         <h1 class="policy-title">Privacy Policy</h1>
         <p class="policy-tagline">How we treat your information</p>
-        <p class="policy-meta"><strong>Last updated: April 14, 2026</strong></p>
+        <p class="policy-meta"><strong>Last updated: April 17, 2026</strong></p>
         <p>BreatheWith supports breathing practice without building a profile about you. This policy describes what the app does with information in plain language.</p>
 
         <h2>Information we collect</h2>
@@ -30,8 +30,8 @@ import { CommonModule } from '@angular/common';
 
         <h2>This website</h2>
         <p>This support site may be hosted on a provider (for example GitHub Pages). Standard web servers can log technical data such as IP address and browser type when you load a page. We do not use those logs for marketing or profiling through this static site.</p>
-        <p>If you email us from this site (for support or to ask for a Google Play closed-test invite), you choose what to send. We use that information only to reply or, when you ask, to add your Google account to closed testing in Google Play. We do not sell those messages.</p>
-        <p>The closed-test signup form posts to a third-party form handler (FormSubmit) that forwards submissions to our support email; FormSubmit’s privacy terms apply to that step. We use the address you submit only to add you as a Play tester or to reply.</p>
+        <p>If you email us from this site (for support), you choose what to send. We use that information only to reply. We do not sell those messages.</p>
+        <p>If you join the BreatheWith Google Group for early access testing, Google’s privacy terms for Groups apply to that membership. We use the group only to manage the tester list for Google Play and to share test-related updates.</p>
 
         <h2>Third-party services in the app</h2>
         <p>The application does not embed third-party analytics or advertising SDKs for tracking.</p>
