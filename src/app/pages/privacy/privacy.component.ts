@@ -19,11 +19,12 @@ import { CommonModule } from '@angular/common';
       <section class="card policy-section">
         <h1 class="policy-title">Privacy Policy</h1>
         <p class="policy-tagline">How we treat your information</p>
-        <p class="policy-meta"><strong>Last updated: April 17, 2026</strong></p>
+        <p class="policy-meta"><strong>Last updated: April 22, 2026</strong></p>
         <p>BreatheWith supports breathing practice without building a profile about you. This policy describes what the app does with information in plain language.</p>
 
         <h2>Information we collect</h2>
-        <p>BreatheWith does not collect, store on our servers, transmit to us, or sell personal information, health information, usage analytics, or advertising identifiers.</p>
+        <p>BreatheWith does not collect, store on our servers, transmit to us, or sell personal information, health information, or advertising identifiers.</p>
+        <p>To help us keep the app running smoothly, we collect anonymous technical data when the app crashes or encounters an error. This does not include your identity or your personal breathing sessions.</p>
 
         <h2>Data stored on your device</h2>
         <p>The app may keep preferences locally so sessions feel consistent—such as chosen rhythms, audio and haptic settings, and appearance options. That data remains on your device under your operating system’s controls.</p>
@@ -34,7 +35,8 @@ import { CommonModule } from '@angular/common';
         <p>If you join the BreatheWith Google Group for early access testing, Google’s privacy terms for Groups apply to that membership. We use the group only to manage the tester list for Google Play and to share test-related updates.</p>
 
         <h2>Third-party services in the app</h2>
-        <p>The application does not embed third-party analytics or advertising SDKs for tracking.</p>
+        <p>We use <strong>Firebase Crashlytics</strong> (provided by Google) to help us find and fix bugs. When the app crashes, it sends a report with technical details about your device (like model and OS version) and what the app was doing at the time. We use this only for troubleshooting, not for marketing or tracking.</p>
+        <p>The application does not embed advertising SDKs.</p>
 
         <h2>Children’s privacy</h2>
         <p>Because we do not knowingly collect personal information through the app, we do not knowingly collect personal information from children.</p>
