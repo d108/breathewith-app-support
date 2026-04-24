@@ -17,7 +17,23 @@ import { RouterLink } from '@angular/router';
 
     <main id="main" class="container main-stack">
       <h1 class="visually-hidden">BreatheWith: help, downloads, and FAQs</h1>
-      
+
+      <figure class="screenshot-figure animated-figure">
+        <video 
+          class="screenshot-img" 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          poster="images/landscape_android_tablet.png"
+          aria-label="Animated demonstration of BreatheWith on an Android tablet in landscape mode">
+          <source src="images/android_landscape.mp4" type="video/mp4">
+          <source src="images/android_landscape.webm" type="video/webm">
+          <img src="images/android_landscape.gif" alt="Animated demonstration of BreatheWith on an Android tablet" class="screenshot-img">
+        </video>
+        <figcaption>Enjoy a spacious, balanced breathing experience on Android tablets.</figcaption>
+      </figure>
+
       <section id="download" class="card" aria-labelledby="download-heading">
         <h2 id="download-heading">Download</h2>
         <p class="lede">BreatheWith is a breathing pacer: you choose a rhythm—box, 4–6, balance, or another preset—and follow an <strong>on-screen visual guide</strong> together with <strong>audio and haptic cues</strong>, so you see the pattern, hear it, and feel it—instead of just counting in your head. It runs on <strong>iOS</strong> (<strong>iPhone</strong>, <strong>iPad</strong>) and <strong>Apple Watch</strong> (with iPhone) from the App Store, and on <strong>Android</strong> from Google Play—use the buttons below.</p>
@@ -95,6 +111,28 @@ import { RouterLink } from '@angular/router';
       flex: 1;
       padding-bottom: 2rem;
       position: relative;
+    }
+
+    .screenshot-figure {
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .screenshot-img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: var(--card-shadow);
+      border: var(--card-border);
+      display: block;
+    }
+
+    .screenshot-figure figcaption {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 500;
     }
 
     .card {
